@@ -1,0 +1,33 @@
+
+.addform label {
+    display: block;
+    margin-top: 10px;
+}
+
+.addform input[type="text"],
+.addform input[type="number"],
+.addform select {
+    width: 100%;
+    padding: 8px;
+    margin-top: 1px;
+    margin-bottom: -25px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+.addform button[type="button"],
+.addform input[type="submit"] {
+    display: block;
+    margin: 10px 0;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.addform button[type="button"]:hover,
+.addform input[type="submit"]:hover {
+    background-color: #0056b3;
+}

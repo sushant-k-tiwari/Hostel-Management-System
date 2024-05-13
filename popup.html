@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>popup</title>
+    <style>
+      /* Styles for the overlay background */
+      .overlay {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 50%;
+        margin-top: 25vh;
+        background-color: rgba(0, 0, 0, 0.7);
+      }
+
+      /* Styles for the popup container */
+      .popup {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 5px;
+      }
+
+      /* Styles for the text fields */
+      input[type="text"] {
+        width: 50%;
+        padding: 10px;
+        margin: 5px 0;
+        border: 1px solid #ccc;
+        border-radius: 3px;
+        display: inline-block; /* Align fields horizontally */
+      }
+
+      /* Style for the submit button */
+      .submit-btn {
+        background-color: #4caf50;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 3px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <button onclick="openPopup()">Open Popup</button>
+
+    <div class="overlay" id="popupOverlay">
+      <div class="popup">
+        <h2>Enter Vendor Information</h2>
+        <input type="text" placeholder="Vendor Name" id="vendorName" />
+        <input type="text" placeholder="GSTIN" id="gstin" />
+        <input type="text" placeholder="Amount" id="amount" />
+        <button class="submit-btn" onclick="submitData()">Submit</button>
+      </div>
+    </div>
+
+    <script>
+      // Function to open the popup
+      function openPopup() {
+        document.getElementById("popupOverlay").style.display = "block";
+      }
+
+      // Function to submit data and close the popup
+      function submitData() {
+        const vendorName = document.getElementById("vendorName").value;
+        const gstin = document.getElementById("gstin").value;
+        const amount = document.getElementById("amount").value;
+
+        // You can perform actions with the data here, e.g., send it to a server
+
+        // Close the popup
+        document.getElementById("popupOverlay").style.display = "none";
+      }
+    </script>
+  </body>
+</html>
+<html></html>

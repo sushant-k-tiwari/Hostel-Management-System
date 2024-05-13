@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Print Example</title>
+    <style>
+        @media print {
+            body * {
+                visibility: hidden;
+            }
+            #printable-content, #printable-content * {
+                visibility: visible;
+            }
+            #printable-content {
+                position: absolute;
+                left: 0;
+                top: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Web Page Example</h1>
+    <div id="printable-content">
+        <h2>This is the part you want to print</h2>
+        <p>This is some content that you want to print.</p>
+    </div>
+    <button id = print onclick="printContent()">Print</button>
+
+    <script>
+        function printContent() {
+            window.print();
+        }
+    </script>
+</body>
+</html>
